@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/welcome_bg"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <include layout="@layout/layout_menu" />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg" >
+        <com.example.bjlz.qianshandoctor.views.TitleBarView
+            android:layout_width="match_parent"
+            android:id="@+id/title_bar"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/circle_image_tou_xiang"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_below="@id/circle_image_tou_xiang"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="张医生"
+                android:textSize="20sp"
+                android:id="@+id/text_ni_cheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/ll_things"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/text_ni_cheng"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="关注:"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/text_guan_zhu"
+                    android:text="88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="收益:"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/text_shou_yi"
+                    android:text="00.00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="评论:"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/text_ping_lun"
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_alignBottom="@id/ll_things"
+                android:background="@color/devide_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+       <RelativeLayout
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <GridView
+               android:id="@+id/grid_button"
+               android:layout_width="match_parent"
+               android:layout_height="350dp"
+               android:columnWidth="50dp"
+               android:gravity="center"
+               android:layout_centerInParent="true"
+               android:background="@color/transparent"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:horizontalSpacing="1dp"
+               android:verticalSpacing="1dp"
+               android:listSelector="@color/transparent"
+               android:numColumns="2" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginBottom="10dp"
+               android:layout_alignParentBottom="true"
+               android:layout_height="wrap_content">
+               <Button
+                   android:background="@color/devide_line"
+                   android:id="@+id/btn_shou_ye"
+                   android:text="首页"
+                   android:layout_width="0dp"
+                   android:layout_weight="1.0"
+                   android:layout_height="35dp" />
+               <Button
+                   android:background="@color/devide_line"
+                   android:id="@+id/btn_ji_yin_jian_ce"
+                   android:text="基因检测"
+                   android:layout_width="0dp"
+                   android:layout_weight="1.0"
+                   android:layout_height="35dp" />
+               <Button
+                   android:background="@color/devide_line"
+                   android:id="@+id/btn_user_center"
+                   android:text="个人中心"
+                   android:layout_width="0dp"
+                   android:layout_weight="1.0"
+                   android:layout_height="35dp" />
+           </LinearLayout>
+       </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

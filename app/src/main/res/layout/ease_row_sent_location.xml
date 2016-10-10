@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        style="@style/chat_text_date_style"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center|right"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:background="@drawable/ease_chatto_bg"
+            android:layout_marginRight="@dimen/folder_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/chat_content_date_style"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ease_location_msg"
+                android:gravity="center|left"
+                android:textSize="13sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image_chat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right|center|top"
+            android:background="@drawable/ease_default_avatar" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textview_chat"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="123"
+            android:textSize="13sp" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
